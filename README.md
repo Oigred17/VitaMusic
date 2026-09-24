@@ -56,7 +56,7 @@ The build needs [vitasdk](https://vitasdk.org) with `vita2d` and libcurl
 
 ```sh
 export VITASDK=/usr/local/vitasdk   # your toolchain path
-git clone <repo-url> VitaMusic
+git clone https://github.com/Oigred17/VitaMusic.git VitaMusic
 cd VitaMusic
 cmake -B build -G Ninja
 cmake --build build
