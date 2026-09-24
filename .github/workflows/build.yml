@@ -19,6 +19,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Sync TLS packages
+        run: |
+          vdpm pacman -Rdd --noconfirm openssl-1.1.1
+          VDPM_NONINTERACTIVE=1 vdpm install --force openssl
+
       - name: Configure
         run: cmake -B build -G Ninja
 
